@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshat Puri Goswami - Education</title>
+    <style>
+        /* General Styles for first look*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #2d2d2d;
+            margin: 0;
+            height: 100vh;
+        }
+
+        h1, h2 {
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header {
+            background: linear-gradient(to right, #ff414d, #ff7373);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            animation: fadeIn 1s ease-out;
+            height: 30vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1200x300') no-repeat center;
+            background-size: cover;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* For Navigation Bar */
+        nav {
+            background: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #ff414d;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Section Stylingg */
+        .tab-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+            display: none;
+            background: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ff414d;
+            border-bottom: 3px solid #ff7373;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .tab-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .skills-container, .Education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .skill, .Education-item {
+            padding: 20px;
+            border-radius: 10px;
+            background: #444;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        }
+
+        .skill:hover, .Education-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            background: #ff414d;
+        }
+
+        .skill span, .Education-item h3 {
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        /* Footer part*/
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            font-size: 1rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        function openTab(tabName) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Akshat Puri Goswami</h1>
+        <p>Cybersecurity Enthusiast | Ethical Hacker | College Student</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="javascript:openTab('about')">About</a></li>
+            <li><a href="javascript:openTab('skills')">Skills</a></li>
+            <li><a href="javascript:openTab('Education')">Education</a></li>
+            <li><a href="javascript:openTab('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about" class="tab-content active">
+            <h2>About Me</h2>
+            <p>I am Akshat Puri Goswami, a passionate cybersecurity enthusiast with a strong interest in Ethical Hacking and Red Teaming. Currently pursuing a degree of BCA in Cybersecurity course at Jaipur National University. I am dedicated to building a career in this field and aiming to launch my own startup.</p>
+        </section>
+
+        <section id="skills" class="tab-content">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <span>Cybersecurity</span>
+                </div>
+                <div class="skill">
+                    <span>Computer Networks</span>
+                </div>
+                <div class="skill">
+                    <span>Python Programming</span>
+                </div>
+                <div class="skill">
+                    <span>Kali Linux</span>
+                </div>
+                <div class="skill">
+                    <span>C Programming</span>
+                </div>
+                <div class="skill">
+                    <span>Problem Solving</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="Education" class="tab-content">
+            <h2>Education</h2>
+            <div class="Education-container">
+                <div class="Education-item">
+                    <h3>High School</h3>
+                    <p>Stream: PCM</p>
+                </div>
+                <div class="Education-item">
+                    <h3>Graduation</h3>
+                    <p>Jaipur National University</p>
+                </div>
+                <div class="Education-item">
+                    <h3>Course</h3>
+                    <p>BCA: Cybersecurity</p>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section id="contact" class="tab-content">
+            <h2>Contact Information</h2>
+            <div class="contact-container">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p>akshatgoswami2006@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>WhatsApp</h3>
+                    <p>+91 9753873378</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Address</h3>
+                    <p>Jaipur, Rajasthan</p>
+                </div>
+            </div>
+        </section>
+    
+    </main>
+</body>
+</html>     
